@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS songs CASCADE;
+
+CREATE TABLE songs (
+    id SERIAL PRIMARY KEY, 
+    name TEXT NOT NULL,
+    title TEXT NOT NULL,
+    artist TEXT NOT NULL
+    
+);
