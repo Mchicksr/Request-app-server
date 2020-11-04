@@ -1,20 +1,20 @@
 const xss = require('xss')
 
 const songsServices = {
-    getAllSongs(db) {
-        return db
+    getAllSongs(knex) {
+        return knex
         .select('*')
         .from('songs')
     },
 
-    getById(db,id){
-        return songsServices.getAllSongs(db)
+    getById(knex,id){
+        return songsServices.getAllSongs(knex)
         .where('id', id)
         .first()
     },
 
-    insertSong(db, newSong){
-        return db
+    insertSong(knex, newSong){
+        return knex
         .insert(newSong)
         .into('songs')
         .returning('*')
@@ -33,8 +33,8 @@ const songsServices = {
        } 
     },
 
-    deleteSong(db, id) {
-        return db('songs')
+    deleteSong(knex, id) {
+        return knex('songs')
         .where({ id })
         .delete()
     }
