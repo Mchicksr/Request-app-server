@@ -15,11 +15,12 @@ reviewRouter
     })
 
 reviewRouter
-.route('/:id')
+.route('/review/:id')
     .get((req,res)=> {
-        reviewServices.getById(req.app.get('db')
-            .then(review => res.json(review.id))
+        reviewServices.getById(req.app.get('db'),req.params.id
+     
         )
+        .then(review => res.json(review))
     })
 
 reviewRouter
