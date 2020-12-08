@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const { NODE_ENV } = require('./config');
 const songsRouter = require('./request-server/request-router')
+const reviewRouter = require('./review/review-router')
 const app = express();
 
 const morganOption = (NODE_ENV === 'production')
@@ -20,9 +21,14 @@ app.get('/', (req, res) => {
 });
 
  app.use('/api',songsRouter)
+ app.use('/api',reviewRouter)
 
  app.post('/songs', (req,res) => {
   res.status(201).send('all the songs')
+ })
+
+ app.post('/review', (req,res)=>{
+   res.status(201).send('all the reviews')
  })
 // localhost8080/api/songs
 
