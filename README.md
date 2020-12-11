@@ -25,8 +25,6 @@ Run the tests `npm test`
 
 ## info
 Routes
-1.  './songs' songs route holds the body to create the single request for a song as well is the rote to Get all songs.
+1.  './songs' songs route holds the body to create the single request for a song as well as the rote to Get all songs.
 
-2.  './review' the review route allows you to post a review to be sent ot the database to be viewd
-
-
+2.  './review' the review route allows you to post a review to be sent to the database to be viewed.
