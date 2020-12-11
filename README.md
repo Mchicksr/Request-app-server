@@ -1,17 +1,19 @@
-# Express Boilerplate!
+# Request App server!
 
-This is a boilerplate project used for starting new projects!
-
+This app was made with Node.js 
+tests: Supertest and express
+DataBase: psql
+Deployed server:https://mighty-temple-37477.herokuapp.com/
 ## Set up
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+Complete the following steps to start 
 
-1. Clone this repository to your local machine `git clone https://github.com/jbarnes439/express-boilerplate.git NEW-PROJECTS-NAME`
+1. Clone this repository to your local machine `git clone https://github.com/Mchicksr/Request-app-server.git
 2. `cd` into the cloned repository
 3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
 4. Install the node dependencies with `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+5. Move the example Environment file to `.env` 
+6. Edit the contents of the `package.json` 
 
 ## Scripts
 
@@ -21,6 +23,10 @@ Start nodemon for the application `npm run dev`
 
 Run the tests `npm test`
 
-## Deploying
+## info
+Routes
+1.  './songs' songs route holds the body to create the single request for a song as well is the rote to Get all songs.
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch. 
+2.  './review' the review route allows you to post a review to be sent ot the database to be viewd
+
+

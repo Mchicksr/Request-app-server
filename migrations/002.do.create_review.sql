@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS review CASCADE;
+
+CREATE TABLE review (
+    review TEXT NOT NULL
+);
