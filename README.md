@@ -28,3 +28,67 @@ Routes
 1.  './songs' songs route holds the body to create the single request for a song as well as the rote to Get all songs.
 
 2.  './review' the review route allows you to post a review to be sent to the database to be viewed.
+
+## POST /api/songs
+
+//req.body
+{
+Name:String,
+Artist:String,
+Title:String,
+Comment:String
+}
+
+## POST/api/review
+
+//req.body
+
+{
+Review:String
+}
+
+## GET /api/songs
+// res.body
+{
+Id:int
+Name:String,
+Artist:String,
+Title:String,
+Comment:String
+
+} 
+
+## GET /api/songs/:id
+//res.params
+{
+Id:ID
+}
+// res.body
+{
+Id:int
+Name:String,
+Artist:String,
+Title:String,
+Comment:String
+
+} 
+
+## GET /api/review/:id
+//res.params
+{
+Id:ID
+}
+//res.body
+{
+Review:String
+}
+
+### Built with
+* Node - Run-time environment
+* Express - Web application framework
+* PSQL - Database
+* Mocha - Testing
+* Chai - Testing
+
+Authors
+Michael Hicks Richardson - Full-Stack
