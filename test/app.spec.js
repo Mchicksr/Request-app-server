@@ -131,12 +131,12 @@ context('Given there are Reviews in the database', () => {
     it('GET / responds with 201 containing "all the reviews"', () => {
       return supertest(app)
       .get('/api/review')
-      .expect(201)
+      .expect(200)
     })
   })
 
   describe(`GET /review/:id`, () => {
-    it.skip('GET / responds with 200 containing ":id"', () => {
+    it('GET / responds with 200 containing ":id"', () => {
       const reviewId = 2
       const expectedReview = testReview[reviewId - 1]
       return supertest(app)
