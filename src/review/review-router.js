@@ -7,12 +7,20 @@ const reviewRouter = express.Router()
 const jsonBodyParser = express.json()
 
 reviewRouter
-    .route('/review')
-    .get((req, res, next) => {
-        reviewRouter.getAllReviews(req.app.get('db'))
-            .then(review => res.json(review))
-            console.log(res)
+
+.route('/review')
+
+.get((req, res, next) => {
+    console.log('review endpoint')
+    reviewServices.getAllReviews(req.app.get('db'))
+    .then(review =>{ console.log(review);res.json(review)})
+    .catch(err => {
+        console.log(err)
+        next(err)
     })
+
+    // console.log(res)
+})
 
 reviewRouter
 .route('/review/:id')
