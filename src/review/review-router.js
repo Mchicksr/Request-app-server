@@ -8,8 +8,9 @@ const jsonBodyParser = express.json()
 
 reviewRouter
     .route('/review')
-    .get((req, res, next) => {
-        reviewRouter.getAllReviews(req.app.get('db'))
+    .get((req, res, next)  =>  {
+        reviewServices.getAllReviews(req.app.get('db')
+        )
             .then(review => res.json(review))
             console.log(res)
     })
@@ -48,30 +49,5 @@ reviewRouter
             })
     })
 
-    // reviewRouter
-    //     .route('/review')
-
-    //     .post(jsonBodyParser, (req,res,next) => {
-    //         const { review } = req.body
-    //         const newReview ={
-    //             review
-    //         }
-
-    //         for (const [key, value] of Object.entries(newRev))
-    //         if (value == null)
-    //             return res.status(400).json({
-    //                 error: `Missing '${key} in request body`
-    //             })
-    //         reviewServices.insertReview(
-    //             req.app.get('db'),
-    //             newReview
-    //         )
-    //             .then(request => {
-    //                 res
-    //                     .status(201)
-    //                     .location(``)
-    //                     .json(reviewServices.serializeReview(review))
-    //             })
-    //     })
-
+  
         module.exports = reviewRouter
