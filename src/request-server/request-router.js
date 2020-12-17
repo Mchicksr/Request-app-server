@@ -11,21 +11,22 @@ songsRouter
     .route('/songs')
    
     .get((req, res, next) => {
+        // console.log("TEST reviw")
         songsServices.getAllSongs(req.app.get('db')
         )
             .then(songs => res.json(songs))
-            console.log(res)
+            // console.log(res)
     })
     
 songsRouter
 
-.route('/:id')
+.route('/songs/:id')
   
     .get((req, res) => {
         
-        songsServices.getById(req.app.get('db'))
+        songsServices.getById(req.app.get('db'),req.params.id)
         
-            .then(songs => res.json(songs.id)
+            .then(songs => res.json(songs)
             
             )
             

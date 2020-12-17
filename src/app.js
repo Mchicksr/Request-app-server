@@ -25,6 +25,9 @@ app.get('/', (req, res) => {
  app.post('/songs', (req,res) => {
   res.status(201).send('all the songs')
  })
+// app.get('/api/review',(req, res) => {
+// res.send('done');
+// })
 
  app.post('/review', (req,res)=>{
    res.status(201).send('all the reviews')
