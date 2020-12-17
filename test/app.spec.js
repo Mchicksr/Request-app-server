@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-// const supertest = require('supertest');
+
 const supertest = require('supertest');
 const app = require('../src/app');
 const knex = require('knex')
@@ -54,7 +54,7 @@ beforeEach('insert songs', () => {
            .into('songs')
            .insert(testSongs)
        })
-  // })
+  
 
   it('GET / responds with 200 containing "Hello, world!"', () => {
     return supertest(app)

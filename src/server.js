@@ -14,9 +14,6 @@ const db = knex({
 app.set('db', db)
 
 app.listen(PORT, () => {
-  // console.log(`Server running in ${NODE_ENV} mode at http://localhost:${PORT}`);
+ 
 });
 
-// app.listen(PORT, () => {
-//   console.log(`Server running in ${NODE_ENV} mode at http://localhost:${PORT}`);
-// });

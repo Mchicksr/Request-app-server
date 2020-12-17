@@ -11,11 +11,11 @@ songsRouter
     .route('/songs')
    
     .get((req, res, next) => {
-        // console.log("TEST reviw")
+       
         songsServices.getAllSongs(req.app.get('db')
         )
             .then(songs => res.json(songs))
-            // console.log(res)
+           
     })
     
 songsRouter

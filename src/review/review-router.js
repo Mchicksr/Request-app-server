@@ -19,7 +19,7 @@ reviewRouter
         next(err)
     })
 
-    // console.log(res)
+    
 })
 
 reviewRouter

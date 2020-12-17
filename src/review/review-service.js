@@ -2,10 +2,7 @@ const xss = require('xss')
 
 const reviewServices = {
     getAllReviews(knex) {
-        // return knex
-        // .select('*')
-        // .from('review')
-        console.log("get all")
+        
         return knex('review').select('*');
     },
 
