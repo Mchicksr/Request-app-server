@@ -106,7 +106,19 @@ describe(`GET /songs/:id`, () => {
   })
 })
 
-
+describe(`DELETE /songs`, () => {
+  it('GET / responds with 204 containing ":id"', () => {
+    const idToRemove = 2
+    return supertest(app)
+    .delete(`/api/songs/${idToRemove}`)
+    .expect(204)
+    .then(res =>
+       supertest(app)
+         .get(`/songs`)
+         .expect({})
+     )
+  })
+})
 
 })
 
